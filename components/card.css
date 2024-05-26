@@ -1,0 +1,23 @@
+.card {
+	width: 100%;
+	border: 2px solid #8B451380;
+	border-radius: 1rem;
+	padding: 0.5rem;
+	display: grid;
+	grid-template-rows: 5fr 1fr;
+	height: 400px;
+	margin: 0.5rem;
+	gap: 0.5rem;
+	place-content: center;
+	transition: border 0.5s ease-in-out;
+}
+
+.card div image {
+	border-radius: 1rem;
+	/* transition: scale 0.5s ease-in-out; */
+}
+
+
+.card:hover {
+	border: 2px solid #8B4513;
+}
