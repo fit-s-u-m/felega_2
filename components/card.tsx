@@ -23,7 +23,7 @@ export default function Card({ name, image, url }: CardProps) {
 						className="rounded-lg unselectable :hover:scale-110"
 					/>
 				</div>
-				<div className="text-lg">{name}</div>
+				<div className="text-lg h-fit ">{name}</div>
 			</div>
 
 		</Link>

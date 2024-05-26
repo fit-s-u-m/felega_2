@@ -3,8 +3,6 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
-import { useRouter } from 'next/navigation'
-import { AppRouterInstance } from "next/dist/shared/lib/app-router-context" // for type of useRouter
 
 import { Button } from "./ui/button"
 import {
@@ -30,7 +28,6 @@ const FormSchema = z.object({
 
 export function InputForm() {
 	const { toast } = useToast()
-	const { router }: AppRouterInstance = useRouter()
 	const form = useForm<z.infer<typeof FormSchema>>({
 		resolver: zodResolver(FormSchema),
 		defaultValues: {
@@ -39,14 +36,8 @@ export function InputForm() {
 		},
 	})
 
-	function onSubmit() {
-		if (router && router.push) {
-			router.push('/home');
-		}
-		toast({
-			title: "You have completed the form",
-			description: "Thank you for submitting the form.",
-		})
+	function onSubmit(values: z.infer<typeof formSchema>) {
+		console.log(values)
 	}
 
 	return (

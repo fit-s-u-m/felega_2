@@ -49,13 +49,13 @@ export default function Tab() {
         </TabsTrigger>
       </TabsList>
       <TabsContent value="quest" className="home-cards">
-        <Card name="Adwa" url="quest" image="/adwa.jpg" />
-        <Card name="Adwa" url="quest" image="/entoto.jpg" />
+        <Card name="Adwa" url="Quest" image="/adwa.jpg" />
+        <Card name="Adwa" url="Quest" image="/entoto.jpg" />
       </TabsContent>
 
       <TabsContent value="checkpoint" className="home-cards">
-        <Card name="Adwa" url="checkpoint" image="/adwa.jpg" />
-        <Card name="Entoto" url="checkpoint" image="/entoto.jpg" />
+        <Card name="Adwa" url="Check-point" image="/adwa.jpg" />
+        <Card name="Entoto" url="Check-point" image="/entoto.jpg" />
       </TabsContent>
     </Tabs>
   )
